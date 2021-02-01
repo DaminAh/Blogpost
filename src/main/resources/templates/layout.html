@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thmeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<th-header th:fragment="logged-out" th:remove="tag">
+    <a href="users/login.html" th:href="@{users/login}">Login</a>
+    <a href="users/registration.html" th:href="@{users/registration}"> Register </a>
+</th-header>
+<th-header th:fragment="logged-in" th:remove="tag">
+    <form method="post" th:action="@{users/logout}">
+        <input type="submit" value="Log-Out">
+    </form>
+
+</th-header>
+<body>
+
+</body>
+</html>

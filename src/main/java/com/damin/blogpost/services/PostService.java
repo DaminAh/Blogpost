@@ -1,8 +1,7 @@
-package services;
+package com.damin.blogpost.services;
 
 import com.damin.blogpost.models.Post;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,5 +31,16 @@ public class PostService {
         posts.add(obj2);
         posts.add(obj3);
         return posts;
+    }
+
+    public ArrayList<Post> getOnePost(){
+        ArrayList<Post> posts=new ArrayList<>();
+        Post obj1 = new Post();
+        obj1.setTitle("After logged in-Check out posts");
+        obj1.setBody("Hey this the body of the logged in post");
+        obj1.setDate(new Date());
+        posts.add(obj1);
+        return  posts;
+
     }
 }

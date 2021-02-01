@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+<th-header th:replace="layout::logged-out"></th-header>
 <h1> All Technical posts</h1>
 <main id="main">
     <post th:each="p : ${toast}">
